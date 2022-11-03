@@ -1,0 +1,16 @@
+{% extends "mynotes/layout.html" %}
+{% load static %}
+{% block header %}
+            
+{% endblock %} 
+{% block body %}        
+            <h4 style="text-align:center;">Password</h4>
+            <a  class="btn btn-danger btn-lg px-4 me-sm-3"  href="{% url 'delete_pass' a.id %}">delete-</a>
+            <br/>
+            <br/>
+        <div >
+           <h5> {{a.Website}}</h5>
+           <h5> {{a.Username}}</h5>
+           <h5> {{g}}</h5>
+       </div>&nbsp;
+{% endblock %}

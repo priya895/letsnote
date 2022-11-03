@@ -1,0 +1,21 @@
+{% extends "mynotes/layout.html" %}
+{% load static %}
+{% block header %}
+            
+{% endblock %} 
+{% block body %}        
+            <h4 style="text-align:center;">Password</h4>
+            <a  class="btn btn-primary btn-lg px-4 me-sm-3"  href="{% url 'create_pwd' %}">create+</a>
+            <br/>
+            <br/>
+        {% for a in pi %}
+        <div >
+           <h5 style="color:purple;"> {{a.Website}}</h5>
+           <h5><i>Username: {{a.Username}}</i></h5> 
+            <h5> Password: password is encrypted</h5> 
+           <a  class="btn btn-primary btn-lg px-4 me-sm-3"  href="{% url 'decrypter' a.id %}">decrypt</a>
+       </div>&nbsp;
+       {% endfor %}
+{% endblock %}
+        
+       

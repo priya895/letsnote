@@ -1,0 +1,18 @@
+{% extends "mynotes/layout.html" %}
+{% load static %}
+{% block header %}
+            
+{% endblock %} 
+{% block body %}               
+            {% for a in pi%}
+            <div>
+              <a  class="btn btn-danger btn-lg px-4 me-sm-3"  href="{% url 'remnotes' a.id %}">delete-</a><br/>
+              <br/>
+                   <h2 style="color:purple;">{{a.Title}}</h2>
+                   <h6><i>{{a.content}}</i></h6>
+            </div>
+            {% endfor %}
+{% endblock %}
+        
+       
+    

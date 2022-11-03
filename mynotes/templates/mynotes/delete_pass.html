@@ -1,0 +1,22 @@
+{% extends "mynotes/layout.html" %}
+{% load static %}
+{% block header %}
+<header class="bg py-11">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center justify-content-center">
+            <div class="col-lg-8 col-xl-7 col-xxl-6">
+                <div class="myForm">
+                    <form method="post" action="">
+                      {% csrf_token %}
+                      <h1>Are you sure you want to delete???</h1>
+                      <input class="btn btn-danger" type="submit" value="Yes"/>
+                      <a href="/retrieve"><div class="btn btn-primary">Cancel</div></a>
+                    </form>
+                 </div>
+            </div>
+        <div class="col-xl-3 col-xxl-4 d-none d-xl-block text-right"><img class="img-fluid rounded-3 my-5" src="{% static 'mynotes\assets\random3.jpg' %}" alt="..."></div>     
+    </div>
+</header>
+{% endblock %}
+{% block body %}
+{% endblock %}
